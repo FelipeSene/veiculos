@@ -10,11 +10,28 @@ using System.Windows.Forms;
 
 namespace veiculos
 {
-    public partial class Form1 : Form
+    public partial class frmmenu : Form
     {
-        public Form1()
+        public frmmenu()
         {
             InitializeComponent();
+        }
+
+        private void btncar_Click(object sender, EventArgs e)
+        {
+            frmcarro carro = new frmcarro();
+            carro.Show();
+            this.Hide();
+        }
+
+        private void btncami_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
