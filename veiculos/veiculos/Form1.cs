@@ -26,7 +26,9 @@ namespace veiculos
 
         private void btncami_Click(object sender, EventArgs e)
         {
-            
+            frmcaminhao caminhao = new frmcaminhao();
+            caminhao.Show();
+            this.Hide();
         }
 
         private void btnsair_Click(object sender, EventArgs e)

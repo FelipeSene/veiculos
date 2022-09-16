@@ -10,3 +10,4 @@ C:\Users\Nelson e Elsa\Desktop\Etec\2º ano\CURSO\DS\veiculos\veiculos\veiculos\
 C:\Users\Nelson e Elsa\Desktop\Etec\2º ano\CURSO\DS\veiculos\veiculos\veiculos\obj\Debug\veiculos.exe
 C:\Users\Nelson e Elsa\Desktop\Etec\2º ano\CURSO\DS\veiculos\veiculos\veiculos\obj\Debug\veiculos.pdb
 C:\Users\Nelson e Elsa\Desktop\Etec\2º ano\CURSO\DS\veiculos\veiculos\veiculos\obj\Debug\veiculos.frmcarro.resources
+C:\Users\Nelson e Elsa\Desktop\Etec\2º ano\CURSO\DS\veiculos\veiculos\veiculos\obj\Debug\veiculos.frmcaminhao.resources
