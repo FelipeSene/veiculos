@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace veiculos
 {
+
     public partial class frmcarro : Form
     {
 
@@ -28,11 +29,11 @@ namespace veiculos
              || String.IsNullOrWhiteSpace(txtportas.Text) || String.IsNullOrWhiteSpace(txtmalas.Text))
             {
 
-                MessageBox.Show("Todos os campos devem ser preenchidos");
+                MessageBox.Show("Todos os campos devem ser preenchidos.");
 
             }
             else
-            { 
+            {
 
                 carro = new Carro(txtcarroceria.Text, Convert.ToInt32(txtportas.Text), Convert.ToInt32(txtmalas.Text), txtmarca.Text, Convert.ToInt32(txtpassageiros.Text),
                 Convert.ToInt32(txtchassi.Text), txtmodelo.Text, txtplaca.Text);

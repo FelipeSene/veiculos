@@ -15,7 +15,6 @@ namespace veiculos
         private string modelo;
         private string placa;
 
-
         public Veiculo()
         {
             this.marca = null;
@@ -68,5 +67,4 @@ namespace veiculos
         public abstract String Aparece();
 
     }
-
 }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace veiculos
 {
@@ -30,7 +29,7 @@ namespace veiculos
              || String.IsNullOrWhiteSpace(txtporte.Text) || String.IsNullOrWhiteSpace(txteixos.Text))
             {
 
-                MessageBox.Show("Todos os campos devem ser informados");
+                MessageBox.Show("Todos os campos devem ser preenchidos.");
 
             } 
             else 
@@ -59,7 +58,7 @@ namespace veiculos
 
             if (caminhao == null)
             {
-                MessageBox.Show("Nenhum caminhao cadastrado.");
+                MessageBox.Show("Nenhum caminhão cadastrado.");
             }
             else
             {

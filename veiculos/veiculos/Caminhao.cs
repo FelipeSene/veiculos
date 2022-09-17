@@ -13,7 +13,6 @@ namespace veiculos
         private string porte;
         private int eixos;
 
-
         public Caminhao()
         {
             this.cabine = null;
@@ -67,7 +66,5 @@ namespace veiculos
             return s;
 
         }
-
     }
-
 }
