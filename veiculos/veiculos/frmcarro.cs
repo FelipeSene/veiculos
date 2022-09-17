@@ -14,6 +14,7 @@ namespace veiculos
     {
 
         Carro carro;
+
         public frmcarro()
         {
             InitializeComponent();
@@ -22,26 +23,47 @@ namespace veiculos
         private void btncadastrar_Click(object sender, EventArgs e)
         {
 
-            carro = new Carro(txtcarroceria.Text, (Convert.ToInt32(txtportas.Text)), (Convert.ToInt32(txtmalas.Text)), txtmarca.Text, (Convert.ToInt32(txtpassageiros.Text)),
-            (Convert.ToInt32(txtchassi.Text)), txtmodelo.Text, txtplaca.Text);
+            if (String.IsNullOrWhiteSpace(txtmarca.Text) || String.IsNullOrWhiteSpace(txtpassageiros.Text) || String.IsNullOrWhiteSpace(txtchassi.Text)
+             || String.IsNullOrWhiteSpace(txtmodelo.Text) || String.IsNullOrWhiteSpace(txtplaca.Text) || String.IsNullOrWhiteSpace(txtcarroceria.Text)
+             || String.IsNullOrWhiteSpace(txtportas.Text) || String.IsNullOrWhiteSpace(txtmalas.Text))
+            {
 
-            txtmarca.Clear();
-            txtpassageiros.Clear();
-            txtchassi.Clear();
-            txtmodelo.Clear();
-            txtplaca.Clear();
-            txtcarroceria.Clear();
-            txtportas.Clear();
-            txtmalas.Clear();
-            
+                MessageBox.Show("Todos os campos devem ser preenchidos");
 
-            MessageBox.Show("Carro cadastrado com sucesso.");
+            }
+            else
+            { 
+
+                carro = new Carro(txtcarroceria.Text, Convert.ToInt32(txtportas.Text), Convert.ToInt32(txtmalas.Text), txtmarca.Text, Convert.ToInt32(txtpassageiros.Text),
+                Convert.ToInt32(txtchassi.Text), txtmodelo.Text, txtplaca.Text);
+
+                txtmarca.Clear();
+                txtpassageiros.Clear();
+                txtchassi.Clear();
+                txtmodelo.Clear();
+                txtplaca.Clear();
+                txtcarroceria.Clear();
+                txtportas.Clear();
+                txtmalas.Clear();
+
+                MessageBox.Show("Carro cadastrado com sucesso.");
+
+            }
 
         }
 
         private void btnconsultar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(carro.Aparece());
+
+            if (carro == null)
+            {
+                MessageBox.Show("Nenhum carro cadastrado.");
+            }
+            else
+            {
+                MessageBox.Show(carro.Aparece());
+            }
+
         }
 
         private void btnvoltar_Click(object sender, EventArgs e)

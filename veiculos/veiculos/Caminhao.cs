@@ -61,7 +61,7 @@ namespace veiculos
                               "Chassi: ", this.Chassi.ToString(), "\r\n",
                               "Modelo: ", this.Modelo, "\r\n",
                               "Placa: ", this.Placa, "\r\n",
-                              "Cabine: ", this.Cabine, "\r\n",
+                              "Tipo de Cabine: ", this.Cabine, "\r\n",
                               "Porte: ", this.Porte, "\r\n",
                               "Eixos: ", this.Eixos.ToString());
             return s;

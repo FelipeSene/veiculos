@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace veiculos
 {
+
     public partial class frmcaminhao : Form
     {
 
         Caminhao caminhao;
+
         public frmcaminhao()
         {
             InitializeComponent();
@@ -22,25 +25,47 @@ namespace veiculos
         private void btncadastrar_Click(object sender, EventArgs e)
         {
 
-            caminhao = new Caminhao(txtcabine.Text, txtporte.Text, (Convert.ToInt32(txteixos.Text)), txtmarca.Text, (Convert.ToInt32(txtpassageiros.Text)),
-            (Convert.ToInt32(txtchassi.Text)), txtmodelo.Text, txtplaca.Text);
+            if (String.IsNullOrWhiteSpace(txtmarca.Text) || String.IsNullOrWhiteSpace(txtpassageiros.Text) || String.IsNullOrWhiteSpace(txtchassi.Text)
+             || String.IsNullOrWhiteSpace(txtmodelo.Text) || String.IsNullOrWhiteSpace(txtplaca.Text) || String.IsNullOrWhiteSpace(txtcabine.Text) 
+             || String.IsNullOrWhiteSpace(txtporte.Text) || String.IsNullOrWhiteSpace(txteixos.Text))
+            {
 
-            txtmarca.Clear();
-            txtpassageiros.Clear();
-            txtchassi.Clear();
-            txtcabine.Clear();
-            txtporte.Clear();
-            txtmodelo.Clear();
-            txteixos.Clear();
-            txtplaca.Clear();
+                MessageBox.Show("Todos os campos devem ser informados");
 
-            MessageBox.Show("Caminhão cadastrado com sucesso.");
+            } 
+            else 
+            {
+
+                caminhao = new Caminhao(txtcabine.Text, txtporte.Text, Convert.ToInt32(txteixos.Text), txtmarca.Text, Convert.ToInt32(txtpassageiros.Text),
+                Convert.ToInt32(txtchassi.Text), txtmodelo.Text, txtplaca.Text);
+
+                txtmarca.Clear();
+                txtpassageiros.Clear();
+                txtchassi.Clear();
+                txtcabine.Clear();
+                txtporte.Clear();
+                txtmodelo.Clear();
+                txteixos.Clear();
+                txtplaca.Clear();
+
+                MessageBox.Show("Caminhão cadastrado com sucesso.");
+
+            }
 
         }
 
         private void btnconsultar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(caminhao.Aparece());
+
+            if (caminhao == null)
+            {
+                MessageBox.Show("Nenhum caminhao cadastrado.");
+            }
+            else
+            {
+                MessageBox.Show(caminhao.Aparece());
+            }
+
         }
 
         private void btnvoltar_Click(object sender, EventArgs e)

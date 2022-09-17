@@ -62,8 +62,8 @@ namespace veiculos
                               "Modelo: ", this.Modelo, "\r\n",
                               "Placa: ", this.Placa, "\r\n",
                               "Carroceria: ", this.Carroceria, "\r\n",
-                              "Porta: ", this.Porta.ToString(), "\r\n",
-                              "Mala: ", this.Mala.ToString());
+                              "Portas: ", this.Porta.ToString(), "\r\n",
+                              "Porta-Malas(Litros): ", this.Mala.ToString());
             return s;
 
         }
